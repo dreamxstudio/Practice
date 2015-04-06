@@ -130,9 +130,6 @@ PROC_END
 
 #ifdef LOCAL
 
-/*
- * MAINAPP
- */
 int main(int argc, char** argv) 
 {
     RUN_STACK(hdu1003);
