@@ -2,15 +2,17 @@
 #define HDU1007_HPP
 
 #include <stdio.h>
-#include <limits.h> 
+#include <limits.h>
 #include <stdlib.h>
 #include <math.h>
+#include <vector>
+#include <algorithm>
 
 #ifdef __cplusplus
 
 #define BEGIN(l) class l{ public:
 #define END };
-#define RUN(l) l instance; instance.run(); 
+#define RUN(l) l instance; instance.run();
 
 #else
 
@@ -20,53 +22,121 @@
 #define TEST(l) test()
 
 #endif
- 
-using namespace std;
 
 #define max(l,m) ((l)>(m)?(l):(m))
 #define min(l,m) ((l)<(m)?(l):(m))
 #define abs(l) ((l)>0?(l):-(l))
 
 BEGIN(hdu1007)
- 
 
-
-double dist(double x1, double y1, double x2, double y2)
+struct st_point
 {
-	return sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
+	double x;
+	double y;
+
+	st_point()
+	{}
+
+	st_point(double _x, double _y) :
+		x(_x), y(_y)
+	{}
+};
+
+static bool cmpx(const st_point &a, const st_point &b)
+{
+	if (a.x != b.x)
+		return a.x<b.x;
+	return a.y<b.y;
+}
+
+static bool cmpy(const st_point &a, const st_point &b)
+{
+	if (a.y != b.y)
+		return a.y<b.y;
+	return a.x<b.x;
+}
+
+double dist(const st_point &s, const st_point &e)
+{
+	return sqrt((s.x - e.x)*(s.x - e.x) + (s.y - e.y)*(s.y - e.y));
+}
+
+double nearest_pair(st_point *pts, const int &left, const int &right)
+{
+	if (left == right)
+		return INT_MAX;
+
+	if (left + 1 == right)
+		return dist(pts[left], pts[right]);
+
+	if (left + 2 == right)
+	{
+		double d1 = dist(pts[left], pts[left + 1]);
+		double d2 = dist(pts[left], pts[left + 2]);
+		double d3 = dist(pts[left + 1], pts[left + 2]);
+
+		return min(d1, min(d2, d3));
+	}
+
+	int mid = (left + right) >> 1;
+
+	double d_l = nearest_pair(pts, left, mid);
+	double d_r = nearest_pair(pts, mid + 1, right);
+
+	double d = min(d_l, d_r);
+
+	st_point *tmp_pts = new st_point[right - left + 1];
+	int cnt = 0;
+	for (int i = mid - 1; i >= left && abs(pts[mid].y - pts[i].y) < d; --i)// left; i <= right &&; ++i)
+	{
+		tmp_pts[cnt++] = pts[i];
+	}
+
+	for (int i = mid + 1; i <= right && abs(pts[mid].y - pts[i].y) < d; ++i)// left; i <= right &&; ++i)
+	{
+		tmp_pts[cnt++] = pts[i];
+	}
+
+	std::sort(tmp_pts, tmp_pts + cnt, cmpx);
+
+	for (int i = 0; i < cnt; ++i)
+	{
+		for (int j = i + 1; j < cnt; ++j)
+		{
+			if (i != j && abs(tmp_pts[i].x - tmp_pts[j].x) < d)
+			{
+				double dis = dist(tmp_pts[i], tmp_pts[j]);
+				if (dis < d)
+				{
+					d = dis;
+				}
+			}
+		}
+	}
+
+	delete[] tmp_pts;
+
+	return d;
 }
 
 void run()
 {
 	int n;
-	for (;scanf("%d",&n),n;)
+	for (; scanf("%d", &n), n;)
 	{
+		st_point *pts = new st_point[n];
+
 		double x, y;
-
-		double max_x, max_y, min_x, min_y;
-
-		for (int i=0;i<n;++i)
+		for (int i = 0; i<n; ++i)
 		{
-			scanf("%lf %lf", &x, &y);
-			if (i == 0)
-			{
-				min_x = max_x = x;
-				min_y = max_y = y;
-			}
-			else
-			{
-				if (min_x > x)
-					min_x = x;
-				if (min_y > y)
-					min_y = y;
-				if (max_x < x)
-					max_x = x;
-				if (max_y < y)
-					max_y = y;
-			}
+			scanf("%lf %lf", &pts[i].x, &pts[i].y);
 		}
 
-		printf("%.2lf\n", dist(min_x,min_y,max_x,max_y)/2);
+		std::sort(pts, pts + n, cmpy);
+
+		printf("%.2lf\n", nearest_pair(pts, 0, n - 1) / 2.0);
+
+		delete[] pts;
 	}
 }
 
