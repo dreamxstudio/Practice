@@ -7,10 +7,11 @@
 #include "hdu1008.hpp"
 #include "hdu1009.hpp" 
 #include "hdu1010.hpp"
+#include "hdu1011.hpp"
 
 int main()
 {
-	RUN(hdu1010);
+	RUN(hdu1011);
 	return 0;
 }
 

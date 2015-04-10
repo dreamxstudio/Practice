@@ -22,15 +22,19 @@
 #define END
 #endif
 #ifndef RUN
-#define RUN(l) run()
+#define RUN() run()
 #endif
 #endif
 
-BEGIN() 
+BEGIN(hdu1011)
 
 void run()
-{ 
+{
+	int N, M;
+	for (;scanf("%d%d",&N,&M),N!=-1&&M!=-1;)
+	{
 
+	}
 }
 
 END
@@ -39,7 +43,7 @@ END
 
 int main(int argc, char **argv)
 {
-	run();
+	RUN();
 	return 0;
 }
 
