@@ -12,18 +12,14 @@
 
 #ifdef __cplusplus
 
-#define PROC_BEGIN(l) class l{ public:
-#define PROC_END };
-#define RUN_STACK(l) l instance; instance.run_stack();
-#define RUN_HEAP(l) l instance; instance.run_heap();
+#define BEGIN(l) class l{ public:
+#define END }; 
 #define RUN(l) l instance; instance.run();
 
 #else
 
 #define PROC_BEGIN(l)
-#define PROC_END
-#define RUN_STACK(l) run_stack()
-#define RUN_HEAP(l) run_heap()
+#define PROC_END 
 #define RUN(l) run()
 
 #endif
@@ -33,15 +29,10 @@
 #include <limits.h>
 
 //O(N)
-PROC_BEGIN(hdu1003)
-        
-#define MAXN 100001
+BEGIN(hdu1003)
 
-int s[MAXN];
-int a[MAXN];
-int nCase;
-int nNum;
-
+const int MAXN = 100001;
+ 
 void calc(int *a,int *s,const int &idx,const int &len)
 {
     int max_sum = INT_MIN;
@@ -87,23 +78,8 @@ void calc(int *a,int *s,const int &idx,const int &len)
     
     printf("Case %d:\n%d %d %d\n",idx+1,max_sum,s_idx+1,e_idx+1);
 }
-
-void run_stack()
-{
-    scanf("%d",&nCase);
-    
-    for (int idx = 0; idx < nCase;++idx)
-    {
-        scanf("%d",&nNum);
-        
-        for(int i=0;i<nNum;++i)
-            scanf("%d",&a[i]);
-        
-        calc(a,s,idx,nNum);
-    }
-}
-
-void run_heap()
+ 
+void run()
 {
     int nCase;
     scanf("%d",&nCase);
@@ -126,7 +102,7 @@ void run_heap()
     }
 }
 
-PROC_END
+END
 
 #ifdef LOCAL
 

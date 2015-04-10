@@ -23,7 +23,7 @@
 
 BEGIN(hdu1005)
 
-#define MAXN 7
+const static int MAXN = 7;
 
 int cycle[MAXN*MAXN+1];
  
