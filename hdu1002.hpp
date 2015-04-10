@@ -1,27 +1,36 @@
+#pragma once
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#ifdef __cplusplus
-
-#define BEGIN(l) class l{ public:
-#define END };
-#define RUN(l) l instance; instance.run(); 
-
+ 
+#ifdef LOCAL
+#ifndef BEGIN
+#define BEGIN(l) namespace l{ 
+#endif
+#ifndef END
+#define END }; 
+#endif
+#ifndef RUN
+#define RUN(l) l::run() 
+#endif
 #else
-
+#ifndef BEGIN
 #define BEGIN(l)
+#endif
+#ifndef END
 #define END
+#endif
+#ifndef RUN
 #define RUN(l) run()
-#define TEST(l) test()
-
+#endif
 #endif
 
 BEGIN(hdu1002)
 
 const static int MAXN = 1005;
  
-int main()
+void run()
 {
 	char a[MAXN], b[MAXN], c[MAXN];
 	int t;
@@ -123,6 +132,16 @@ int main()
 				puts("");
 		}
 	}
-}
+} 
 
 END
+
+#ifndef LOCAL
+
+int main(int argc, char **argv)
+{
+	run();
+	return 0;
+}
+
+#endif

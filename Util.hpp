@@ -5,13 +5,13 @@
 
 #define BEGIN(l) class l{ public:
 #define END };
-#define RUN(l) l instance; instance.run(); 
+#define RUN(l)(l) l instance; instance.run(); 
 
 #else
 
 #define BEGIN(l)
 #define END
-#define RUN(l) run()
+#define RUN(l)(l) run()
 #define TEST(l) test()
 
 #endif

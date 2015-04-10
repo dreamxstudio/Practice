@@ -4,20 +4,26 @@
 #include <stdio.h>
 #include <limits.h> 
  
-#ifdef __cplusplus
-
-#define BEGIN(l) class l{ public:
-#define END };
-#define RUN(l) l instance; instance.run();
-#define TEST(l) l instance; instance.test();
-
+#ifdef LOCAL
+#ifndef BEGIN
+#define BEGIN(l) namespace l{ 
+#endif
+#ifndef END
+#define END }; 
+#endif
+#ifndef RUN
+#define RUN(l) l::run() 
+#endif
 #else
-
+#ifndef BEGIN
 #define BEGIN(l)
+#endif
+#ifndef END
 #define END
+#endif
+#ifndef RUN
 #define RUN(l) run()
-#define TEST(l) test()
-
+#endif
 #endif
 
 #define max(l,m) ((l)>(m)?(l):(m))
@@ -82,5 +88,15 @@ void run()
 }
 
 END
+
+#ifndef LOCAL
+
+int main(int argc, char **argv)
+{
+	run();
+	return 0;
+}
+
+#endif
 
 #endif

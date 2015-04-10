@@ -1,34 +1,32 @@
-
-
 #ifndef HDU1003_HPP
 #define	HDU1003_HPP
-
-/* 
- * File:   hde1003.hpp
- * Author: shijie
- * Desc:  try to declare variables on heap instead of stack for writing clean code.
- * Created on 2015/4/6
- */
-
-#ifdef __cplusplus
-
-#define BEGIN(l) class l{ public:
+ 
+#ifdef LOCAL
+#ifndef BEGIN
+#define BEGIN(l) namespace l{ 
+#endif
+#ifndef END
 #define END }; 
-#define RUN(l) l instance; instance.run();
-
+#endif
+#ifndef RUN
+#define RUN(l) l::run() 
+#endif
 #else
-
-#define PROC_BEGIN(l)
-#define PROC_END 
+#ifndef BEGIN
+#define BEGIN(l)
+#endif
+#ifndef END
+#define END
+#endif
+#ifndef RUN
 #define RUN(l) run()
-
+#endif
 #endif
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-
-//O(N)
+ 
 BEGIN(hdu1003)
 
 const int MAXN = 100001;
@@ -102,22 +100,17 @@ void run()
     }
 }
 
-END
+END 
 
-#ifdef LOCAL
+#ifndef LOCAL
 
-/*
- * MAINAPP
- */
-int main(int argc, char** argv) 
+int main(int argc, char **argv)
 {
-    RUN_STACK(hdu1003);
-    
-    return 0;
+	run();
+	return 0;
 }
 
 #endif
-
 
 #endif	/* HDU1003_HPP */
 
