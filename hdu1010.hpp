@@ -28,7 +28,7 @@
 #define END
 #endif
 #ifndef RUN
-#define RUN(l) run()
+#define RUN() run()
 #endif
 #endif
 
@@ -125,7 +125,7 @@ void run()
 
 		int condition = T - abs(ex - sx) - abs(ey - sy);
 
-		if (tot >= T && (condition >= 0 && condition %2 == 0))
+		if ((condition >= 0 && condition %2 == 0))
 		{
 			dfs(sx, sy, 0);
 		}

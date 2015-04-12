@@ -87,6 +87,7 @@
     <ClInclude Include="hdu1007.hpp" />
     <ClInclude Include="hdu1008.hpp" />
     <ClInclude Include="hdu1009.hpp" />
+    <ClInclude Include="hdu1011.hpp" />
     <ClInclude Include="Template.hpp" />
     <ClInclude Include="Util.hpp" />
   </ItemGroup>

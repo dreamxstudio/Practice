@@ -22,7 +22,7 @@
 #define END
 #endif
 #ifndef RUN
-#define RUN(l) run()
+#define RUN() run()
 #endif
 #endif
 

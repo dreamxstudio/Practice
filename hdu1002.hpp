@@ -22,7 +22,7 @@
 #define END
 #endif
 #ifndef RUN
-#define RUN(l) run()
+#define RUN() run()
 #endif
 #endif
 
@@ -64,8 +64,8 @@ void run()
 					break;
 			}
 
-			int min_len = len_a<len_b ? len_a : len_b;
-			int max_len = len_a>len_b ? len_a : len_b;
+			int min_len = len_a < len_b ? len_a : len_b;
+			int max_len = len_a > len_b ? len_a : len_b;
 
 			int grade = 0;
 
