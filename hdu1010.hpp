@@ -1,5 +1,4 @@
-#ifndef HDU1010_HPP
-#define HDU1010_HPP
+#pragma once
 
 #include <stdio.h>
 #include <limits.h>
@@ -9,34 +8,12 @@
 #include <algorithm>
 #include <queue>
 #include <iostream>
- 
-#ifdef LOCAL
-#ifndef BEGIN
-#define BEGIN(l) namespace l{ 
-#endif
-#ifndef END
-#define END }; 
-#endif
-#ifndef RUN
-#define RUN(l) l::run() 
-#endif
-#else
-#ifndef BEGIN
-#define BEGIN(l)
-#endif
-#ifndef END
-#define END
-#endif
-#ifndef RUN
-#define RUN() run()
-#endif
-#endif
-
+  
 #define max(l,m) ((l)>(m)?(l):(m))
 #define min(l,m) ((l)<(m)?(l):(m))
 #define abs(l) ((l)>0?(l):-(l))
  
-BEGIN(hdu1010)
+namespace hdu1010{
 
 int dir[4][2] = {{ 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 }};
 
@@ -134,17 +111,4 @@ void run()
 	}
 }
 
-END 
-
-#ifndef LOCAL
-
-int main(int argc, char **argv)
-{
-	run();
-	return 0;
-}
-
-#endif
-
-#endif
-
+}  

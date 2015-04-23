@@ -1,5 +1,4 @@
-#ifndef HDU1007_HPP
-#define HDU1007_HPP
+#pragma once
 
 #include <stdio.h>
 #include <limits.h>
@@ -8,67 +7,45 @@
 #include <vector>
 #include <algorithm>
 
-#ifdef LOCAL
-#ifndef BEGIN
-#define BEGIN(l) namespace l{ 
-#endif
-#ifndef END
-#define END }; 
-#endif
-#ifndef RUN
-#define RUN(l) l::run() 
-#endif
-#else
-#ifndef BEGIN
-#define BEGIN(l)
-#endif
-#ifndef END
-#define END
-#endif
-#ifndef RUN
-#define RUN() run()
-#endif
-#endif
-
 #define max(l,m) ((l)>(m)?(l):(m))
 #define min(l,m) ((l)<(m)?(l):(m))
 #define abs(l) ((l)>0?(l):-(l))
 
-BEGIN(hdu1007)
+namespace hdu1007{
 
-struct st_point
+struct Point
 {
 	double x;
 	double y;
 
-	st_point()
+	Point()
 	{}
 
-	st_point(double _x, double _y) :
+	Point(double _x, double _y) :
 		x(_x), y(_y)
 	{}
 };
 
-static bool cmpx(const st_point &a, const st_point &b)
+static bool cmpx(const Point &a, const Point &b)
 {
 	if (a.x != b.x)
 		return a.x<b.x;
 	return a.y<b.y;
 }
 
-static bool cmpy(const st_point &a, const st_point &b)
+static bool cmpy(const Point &a, const Point &b)
 {
 	if (a.y != b.y)
 		return a.y<b.y;
 	return a.x<b.x;
 }
 
-double dist(const st_point &s, const st_point &e)
+double dist(const Point &s, const Point &e)
 {
 	return sqrt((s.x - e.x)*(s.x - e.x) + (s.y - e.y)*(s.y - e.y));
 }
 
-double nearest_pair(st_point *pts, const int &left, const int &right)
+double nearest_pair(Point *pts, const int &left, const int &right)
 {
 	if (left == right)
 		return INT_MAX;
@@ -92,7 +69,7 @@ double nearest_pair(st_point *pts, const int &left, const int &right)
 
 	double d = min(d_l, d_r);
 
-	st_point *tmp_pts = new st_point[right - left + 1];
+	Point *tmp_pts = new Point[right - left + 1];
 	int cnt = 0;
 	for (int i = mid - 1; i >= left && abs(pts[mid].y - pts[i].y) < d; --i)// left; i <= right &&; ++i)
 	{
@@ -131,7 +108,7 @@ void run()
 	int n;
 	for (; scanf("%d", &n), n;)
 	{
-		st_point *pts = new st_point[n];
+		Point *pts = new Point[n];
 		 
 		for (int i = 0; i<n; ++i)
 		{
@@ -146,16 +123,4 @@ void run()
 	}
 }
 
-END
-
-#ifndef LOCAL
-
-int main(int argc, char **argv)
-{
-	run();
-	return 0;
-}
-
-#endif
-
-#endif
+}  

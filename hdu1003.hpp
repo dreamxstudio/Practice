@@ -1,33 +1,10 @@
-#ifndef HDU1003_HPP
-#define	HDU1003_HPP
- 
-#ifdef LOCAL
-#ifndef BEGIN
-#define BEGIN(l) namespace l{ 
-#endif
-#ifndef END
-#define END }; 
-#endif
-#ifndef RUN
-#define RUN(l) l::run() 
-#endif
-#else
-#ifndef BEGIN
-#define BEGIN(l)
-#endif
-#ifndef END
-#define END
-#endif
-#ifndef RUN
-#define RUN() run()
-#endif
-#endif
+#pragma once
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
  
-BEGIN(hdu1003)
+namespace hdu1003 {
 
 const int MAXN = 100001;
  
@@ -100,17 +77,4 @@ void run()
     }
 }
 
-END 
-
-#ifndef LOCAL
-
-int main(int argc, char **argv)
-{
-	run();
-	return 0;
-}
-
-#endif
-
-#endif	/* HDU1003_HPP */
-
+}  

@@ -1,17 +1,8 @@
-#include "hdu1002.hpp"
-#include "hdu1003.hpp"
-#include "hdu1004.hpp"
-#include "hdu1005.hpp"
-#include "hdu1006.hpp"
-#include "hdu1007.hpp"
-#include "hdu1008.hpp"
-#include "hdu1009.hpp" 
-#include "hdu1010.hpp"
-#include "hdu1011.hpp"
+#include "hdu1012.hpp"
 
-int main()
+int main(int argc,char **argv)
 {
-	RUN(hdu1011);
+	hdu1012::run(); 
 	return 0;
 }
 

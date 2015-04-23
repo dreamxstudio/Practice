@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hdu1002.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1003.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1004.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1005.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1006.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1007.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1008.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1009.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1010.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1011.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="bj1000.hpp">
+      <Filter>Baekjoon</Filter>
+    </ClInclude>
+    <ClInclude Include="bj1001.hpp">
+      <Filter>Baekjoon</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1012.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="HDU">
+      <UniqueIdentifier>{a4ca6d74-9e2e-4ef7-96da-02b71ed0e2f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Baekjoon">
+      <UniqueIdentifier>{adcf06c3-550b-4025-91e9-e2cc28b62435}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

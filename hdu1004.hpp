@@ -1,37 +1,15 @@
-#ifndef HDU1004_HPP
-#define	HDU1004_HPP
- 
+#pragma once
+
 #include <map>
 #include <string>
 #include <iostream>
-
-#ifdef LOCAL
-#ifndef BEGIN
-#define BEGIN(l) namespace l{ 
-#endif
-#ifndef END
-#define END }; 
-#endif
-#ifndef RUN
-#define RUN(l) l::run() 
-#endif
-#else
-#ifndef BEGIN
-#define BEGIN(l)
-#endif
-#ifndef END
-#define END
-#endif
-#ifndef RUN
-#define RUN() run()
-#endif
-#endif
+ 
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
 
-BEGIN(hdu1004)
+namespace hdu1004{
    
 void run()
 { 
@@ -59,17 +37,4 @@ void run()
     }
 }
 
-END 
-
-#ifndef LOCAL
-
-int main(int argc, char **argv)
-{
-	run();
-	return 0;
-}
-
-#endif
-
-#endif	/* HDU1004_HPP */
-
+}  

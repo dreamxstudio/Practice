@@ -78,6 +78,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="bj1000.hpp" />
+    <ClInclude Include="bj1001.hpp" />
     <ClInclude Include="hdu1010.hpp" />
     <ClInclude Include="hdu1002.hpp" />
     <ClInclude Include="hdu1003.hpp" />
@@ -88,8 +90,7 @@
     <ClInclude Include="hdu1008.hpp" />
     <ClInclude Include="hdu1009.hpp" />
     <ClInclude Include="hdu1011.hpp" />
-    <ClInclude Include="Template.hpp" />
-    <ClInclude Include="Util.hpp" />
+    <ClInclude Include="hdu1012.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

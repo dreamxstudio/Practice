@@ -1,36 +1,13 @@
-#ifndef HDU1006_HPP
-#define HDU1006_HPP
+#pragma once
 
 #include <stdio.h>
 #include <limits.h> 
  
-#ifdef LOCAL
-#ifndef BEGIN
-#define BEGIN(l) namespace l{ 
-#endif
-#ifndef END
-#define END }; 
-#endif
-#ifndef RUN
-#define RUN(l) l::run() 
-#endif
-#else
-#ifndef BEGIN
-#define BEGIN(l)
-#endif
-#ifndef END
-#define END
-#endif
-#ifndef RUN
-#define RUN() run()
-#endif
-#endif
-
 #define max(l,m) ((l)>(m)?(l):(m))
 #define min(l,m) ((l)<(m)?(l):(m))
 #define abs(l) ((l)>0?(l):-(l))
 
-BEGIN(hdu1006)
+namespace hdu1006{
  
 const double sec_m = 60;
 const double sec_h = 60 * 60;
@@ -87,16 +64,4 @@ void run()
 	}
 }
 
-END
-
-#ifndef LOCAL
-
-int main(int argc, char **argv)
-{
-	run();
-	return 0;
-}
-
-#endif
-
-#endif
+} 
