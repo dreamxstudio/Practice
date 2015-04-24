@@ -12,8 +12,6 @@
 #define max(l,m) ((l)>(m)?(l):(m))
 #define min(l,m) ((l)<(m)?(l):(m))
 #define abs(l) ((l)>0?(l):-(l))
- 
-namespace hdu1010{
 
 int dir[4][2] = {{ 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 }};
 
@@ -110,5 +108,3 @@ void run()
 		puts(found ? "YES" : "NO"); 
 	}
 }
-
-}  

@@ -1,8 +1,8 @@
-#include "hdu1012.hpp"
+#include "hdu1014.hpp"
 
 int main(int argc,char **argv)
 {
-	hdu1012::run(); 
+    run();
 	return 0;
 }
 

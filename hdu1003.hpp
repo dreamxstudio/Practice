@@ -1,19 +1,23 @@
-#pragma once
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
- 
-namespace hdu1003 {
 
-const int MAXN = 100001;
- 
-void calc(int *a,int *s,const int &idx,const int &len)
+#define MAXN 100001
+
+int s[MAXN];
+int a[MAXN];
+int nCase;
+int nNum;
+
+//O(N)
+
+void calc(const int &idx,const int &len)
 {
     int max_sum = INT_MIN;
     
     int s_idx = 0;
     int e_idx = 0;
+    
     
     int jump_idx = 0;
     
@@ -53,28 +57,18 @@ void calc(int *a,int *s,const int &idx,const int &len)
     
     printf("Case %d:\n%d %d %d\n",idx+1,max_sum,s_idx+1,e_idx+1);
 }
- 
+
 void run()
 {
-    int nCase;
     scanf("%d",&nCase);
     
     for (int idx = 0; idx < nCase;++idx)
     {
-        int nNum;
         scanf("%d",&nNum);
         
-        int *a = new int[nNum];
-        int *s = new int[nNum];
-        
-        for (int i = 0; i < nNum; ++i)
+        for(int i=0;i<nNum;++i)
             scanf("%d",&a[i]);
         
-        calc(a,s,idx,nNum);
-        
-        delete [] a;
-        delete [] s;
+        calc(idx,nNum);
     }
 }
-
-}  
