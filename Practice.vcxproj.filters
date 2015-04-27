@@ -43,6 +43,24 @@
     <ClInclude Include="hdu1012.hpp">
       <Filter>HDU</Filter>
     </ClInclude>
+    <ClInclude Include="hdu1014.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1015.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1016.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1017.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1018.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1013.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="HDU">

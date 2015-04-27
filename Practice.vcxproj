@@ -91,6 +91,12 @@
     <ClInclude Include="hdu1009.hpp" />
     <ClInclude Include="hdu1011.hpp" />
     <ClInclude Include="hdu1012.hpp" />
+    <ClInclude Include="hdu1013.hpp" />
+    <ClInclude Include="hdu1014.hpp" />
+    <ClInclude Include="hdu1015.hpp" />
+    <ClInclude Include="hdu1016.hpp" />
+    <ClInclude Include="hdu1017.hpp" />
+    <ClInclude Include="hdu1018.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
