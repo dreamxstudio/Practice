@@ -23,6 +23,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE0D28DF1AF0A73D00CA8BA7 /* hdu1019.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hdu1019.hpp; sourceTree = "<group>"; };
+		DE0D28E01AF0A73D00CA8BA7 /* hdu1020.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hdu1020.hpp; sourceTree = "<group>"; };
 		DE2909401AC664AB0001E733 /* oj */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = oj; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE29094B1AC664D30001E733 /* hdu1003.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hdu1003.hpp; sourceTree = "<group>"; };
 		DE3F940E1AE9E649001C5861 /* hdu1013.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hdu1013.hpp; sourceTree = "<group>"; };
@@ -92,6 +94,8 @@
 				DED159E41AEAB3AE0056023D /* hdu1016.hpp */,
 				DEC7EF4D1AED18BA0032581E /* hdu1017.hpp */,
 				DEC7EF4E1AED22C80032581E /* hdu1018.hpp */,
+				DE0D28DF1AF0A73D00CA8BA7 /* hdu1019.hpp */,
+				DE0D28E01AF0A73D00CA8BA7 /* hdu1020.hpp */,
 			);
 			name = hdu;
 			sourceTree = "<group>";
