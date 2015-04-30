@@ -99,6 +99,7 @@
     <ClInclude Include="hdu1018.hpp" />
     <ClInclude Include="hdu1019.hpp" />
     <ClInclude Include="hdu1020.hpp" />
+    <ClInclude Include="hdu1021.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

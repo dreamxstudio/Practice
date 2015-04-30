@@ -11,7 +11,7 @@
 #define min(l,m) ((l)<(m)?(l):(m))
 #define abs(l) ((l)>0?(l):-(l))
 
-namespace hdu1008{
+namespace hdu1008 {
 
 const static int up = 6;
 const static int down = 4;
