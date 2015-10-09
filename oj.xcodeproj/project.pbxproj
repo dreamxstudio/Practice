@@ -44,6 +44,8 @@
 		DEC7EF4E1AED22C80032581E /* hdu1018.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hdu1018.hpp; sourceTree = "<group>"; };
 		DED159E31AE9EF210056023D /* hdu1015.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hdu1015.hpp; sourceTree = "<group>"; };
 		DED159E41AEAB3AE0056023D /* hdu1016.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hdu1016.hpp; sourceTree = "<group>"; };
+		DEE4CA961BC69939002014CE /* hdu1021.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hdu1021.hpp; sourceTree = "<group>"; };
+		DEE4CA971BC6996C002014CE /* hdu1022.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hdu1022.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,8 @@
 				DEC7EF4E1AED22C80032581E /* hdu1018.hpp */,
 				DE0D28DF1AF0A73D00CA8BA7 /* hdu1019.hpp */,
 				DE0D28E01AF0A73D00CA8BA7 /* hdu1020.hpp */,
+				DEE4CA961BC69939002014CE /* hdu1021.hpp */,
+				DEE4CA971BC6996C002014CE /* hdu1022.hpp */,
 			);
 			name = hdu;
 			sourceTree = "<group>";
