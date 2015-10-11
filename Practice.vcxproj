@@ -78,8 +78,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BigInteger.hpp" />
     <ClInclude Include="bj1000.hpp" />
     <ClInclude Include="bj1001.hpp" />
+    <ClInclude Include="hdu1002_BigInteger.hpp" />
     <ClInclude Include="hdu1010.hpp" />
     <ClInclude Include="hdu1002.hpp" />
     <ClInclude Include="hdu1003.hpp" />
@@ -100,6 +102,8 @@
     <ClInclude Include="hdu1019.hpp" />
     <ClInclude Include="hdu1020.hpp" />
     <ClInclude Include="hdu1021.hpp" />
+    <ClInclude Include="hdu1022.hpp" />
+    <ClInclude Include="hdu1023.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

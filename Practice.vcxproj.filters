@@ -70,6 +70,16 @@
     <ClInclude Include="hdu1021.hpp">
       <Filter>HDU</Filter>
     </ClInclude>
+    <ClInclude Include="hdu1022.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="hdu1023.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
+    <ClInclude Include="BigInteger.hpp" />
+    <ClInclude Include="hdu1002_BigInteger.hpp">
+      <Filter>HDU</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="HDU">
